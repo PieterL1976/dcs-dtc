@@ -156,18 +156,18 @@ namespace DTC.UI.Aircrafts.AH64
 
             return true;
         }
-//
-       // private bool ValidateElevation()
-       // {
-         //   if (!Util.IsValidInt(txtWptElevation.Text))
-         //   {
-         //       lblValidation.Text = "Invalid elevation";
-         //       txtWptElevation.Focus();
-         //       return false;
-         //   }
-//
-        //    return true;
-        //}
+
+        private bool ValidateElevation()
+        {
+            if (!Util.IsValidInt(txtWptElevation.Text) && txtWptElevation.Text != "")
+            {
+                lblValidation.Text = "Invalid elevation";
+                txtWptElevation.Focus();
+                return false;
+            }
+
+            return true;
+        }
 
         private bool ValidateIdent()
         {
