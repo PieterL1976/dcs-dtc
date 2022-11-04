@@ -13,7 +13,7 @@ namespace DTC.Models.AH64.Waypoints
         public string Ident { get; set; }
         public string Free { get; set; }
         public string Mgrs { get; set; }
-        public int Elevation { get; set; }
+        public string Elevation { get; set; }
 
         public Waypoint(int seq, string type, string ident, string free, string mgrs,int elevation)
         {
