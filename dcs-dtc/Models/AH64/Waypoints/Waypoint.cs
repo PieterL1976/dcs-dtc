@@ -15,7 +15,7 @@ namespace DTC.Models.AH64.Waypoints
         public string Mgrs { get; set; }
         public string Elevation { get; set; }
 
-        public Waypoint(int seq, string type, string ident, string free, string mgrs, string elevation)
+        public Waypoint(int seq, string type, string ident, string free, string mgrs,int elevation)
         {
             Sequence = seq;
             Type = type;
@@ -28,7 +28,7 @@ namespace DTC.Models.AH64.Waypoints
         public static Waypoint FromStrings(string type, string ident, string free, string mgrs, string elevation)
         {
             var match = MGRSRegex.Match(mgrs);
-            var wpt = new Waypoint(0, type, ident, free, mgrs, elevation);
+            var wpt = new Waypoint(0, type, ident, free, mgrs, int.Parse(elevation));
             return wpt;
         }
 
