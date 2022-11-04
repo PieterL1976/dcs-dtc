@@ -195,7 +195,7 @@ namespace DTC.UI.Aircrafts.AH64
             if (cboPointType.SelectedIndex > -1)
             {
                 var item = (PointTypeComboBoxItem)cboPointType.SelectedItem;
-                var wpt = new Waypoint(0, item.PointType, item.Ident,txtWptFree.Text,txtWptMGRS.Text,int.Parse(txtWptElevation.Text));
+                var wpt = new Waypoint(0, item.PointType, item.Ident,txtWptFree.Text,txtWptMGRS.Text,txtWptElevation.Text);
                 LoadWaypoint(wpt);
             }
         }

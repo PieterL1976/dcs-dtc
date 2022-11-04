@@ -111,7 +111,7 @@ namespace DTC.Models.AH64
 
                 previous.Waypoints.Waypoints.Add(new Waypoint(
                     i,"WP","WP","", coord.MGRS.LongZone.ToString() + coord.MGRS.LatZone.ToString()+coord.MGRS.Digraph.ToString()+" "+coord.MGRS.Easting.ToString("00000").Substring(0,4) + " " + coord.MGRS.Northing.ToString("00000").Substring(0, 4),
-                    (int)Math.Floor(elevation * feetPerMeter)
+                    Math.Floor(elevation * feetPerMeter)
                 ));
 
             }
