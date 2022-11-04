@@ -140,8 +140,8 @@ namespace DTC.Models.F16
 
                 var lat = pos.Element("Latitude")?.Value;
                 var lon = pos.Element("Longitude")?.Value;
-                var dLat = double.Parse(lat.Replace('.', ','));
-                var dLon = double.Parse(lon.Replace('.', ','));
+                var dLat = double.Parse(lat.Replace(',', '.'));
+                var dLon = double.Parse(lon.Replace(',', '.'));
 
                 float.TryParse(pos.Element("Altitude")?.Value.Replace('.', ','), out var elevation);
                 var coord = new Coordinate(dLat, dLon);
